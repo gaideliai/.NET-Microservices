@@ -1,11 +1,11 @@
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using Play.Catalog.Service.DTOs;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using Play.Catalog.Service.Repositories;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Play.Catalog.Service.DTOs;
 using Play.Catalog.Service.Entities;
+using Play.Catalog.Service.Repositories;
 
 namespace Play.Catalog.Service.Controllers
 {
@@ -20,7 +20,14 @@ namespace Play.Catalog.Service.Controllers
         //     new ItemDto(Guid.NewGuid(), "Iron Sword", "Deals a small amount of damage", 20, DateTimeOffset.UtcNow)
         // };
 
-        private readonly ItemsRepository itemsRepository = new();
+//        private readonly ItemsRepository itemsRepository = new();
+
+        private readonly IItemsRepository itemsRepository;
+
+        public ItemsController(IItemsRepository itemsRepository)
+        {
+            this.itemsRepository = itemsRepository;
+        }
 
         [HttpGet]
         public async Task<IEnumerable<ItemDto>> GetAsync()

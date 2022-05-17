@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MassTransit;
 using Microsoft.AspNetCore.Mvc;
+using Play.Catalog.Contacts;
 using Play.Catalog.Service.DTOs;
 using Play.Catalog.Service.Entities;
 using Play.Common;
@@ -23,10 +25,12 @@ namespace Play.Catalog.Service.Controllers
 //        private readonly ItemsRepository itemsRepository = new();
 
         private readonly IRepository<Item> itemsRepository;
+        private readonly IPublishEndpoint publishEndpoint;
 
-        public ItemsController(IRepository<Item> itemsRepository)
+        public ItemsController(IRepository<Item> itemsRepository, IPublishEndpoint publishEndpoint)
         {
             this.itemsRepository = itemsRepository;
+            this.publishEndpoint = publishEndpoint;
         }
 
         [HttpGet]
@@ -69,6 +73,9 @@ namespace Play.Catalog.Service.Controllers
 
             await itemsRepository.CreateAsync(item);
 
+            //publish a message
+            await publishEndpoint.Publish(new CatalogItemCreated(item.Id, item.Name, item.Description));
+
             return CreatedAtAction(nameof(GetByIdAsync), new { id = item.Id }, item);
         }
 
@@ -105,6 +112,9 @@ namespace Play.Catalog.Service.Controllers
 
             await itemsRepository.UpdateAsync(existingItem);
 
+            //publish a message
+            await publishEndpoint.Publish(new CatalogItemUpdated(existingItem.Id, existingItem.Name, existingItem.Description));
+
             return NoContent();
         }
 
@@ -129,6 +139,9 @@ namespace Play.Catalog.Service.Controllers
             }
 
             await itemsRepository.RemoveAsync(item.Id);
+
+            //publish a message
+            await publishEndpoint.Publish(new CatalogItemDeleted(id));
 
             return NoContent();
         }

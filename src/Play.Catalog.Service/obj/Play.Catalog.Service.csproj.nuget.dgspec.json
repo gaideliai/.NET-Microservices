@@ -4,14 +4,14 @@
     "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {}
   },
   "projects": {
-    "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {
+    "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/Play.Catalog.Contacts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
-        "projectName": "Play.Catalog.Service",
-        "projectPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+        "projectUniqueName": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/Play.Catalog.Contacts.csproj",
+        "projectName": "Play.Catalog.Contacts",
+        "projectPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/Play.Catalog.Contacts.csproj",
         "packagesPath": "/home/anna/.nuget/packages/",
-        "outputPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/obj/",
+        "outputPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/anna/.nuget/NuGet/NuGet.Config"
@@ -38,7 +38,72 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.407/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+        "projectName": "Play.Catalog.Service",
+        "projectPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+        "packagesPath": "/home/anna/.nuget/packages/",
+        "outputPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/anna/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "/home/anna/my-projects/packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/Play.Catalog.Contacts.csproj": {
+                "projectPath": "/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Contacts/Play.Catalog.Contacts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "MassTransit.AspNetCore": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Play.Common": {
               "target": "Package",
               "version": "[1.0.0, )"

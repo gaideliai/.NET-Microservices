@@ -51,3 +51,16 @@
 /home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
 /home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/Play.Common.dll
 /home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/MassTransit.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/MassTransit.Abstractions.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/MassTransit.AspNetCoreIntegration.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/MassTransit.ExtensionsDependencyInjectionIntegration.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/MassTransit.RabbitMqTransport.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/Microsoft.Bcl.AsyncInterfaces.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/RabbitMQ.Client.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/System.Diagnostics.DiagnosticSource.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/System.Text.Encodings.Web.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/System.Text.Json.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/System.Threading.Channels.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/Play.Catalog.Contacts.dll
+/home/anna/my-projects/Play.Catalog/src/Play.Catalog.Service/bin/Debug/net5.0/Play.Catalog.Contacts.pdb

@@ -34,6 +34,7 @@ namespace Play.Catalog.Service.Controllers
         {      
             var items = (await itemsRepository.GetAllAsync()).Select(item => item.AsDto());
 
+            // await Task.Delay(TimeSpan.FromSeconds(2));
             return items;
         }
 
